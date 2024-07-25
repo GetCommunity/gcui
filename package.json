@@ -1,0 +1,79 @@
+{
+  "name": "@getcommunity/gcui",
+  "description": "",
+  "version": "0.0.0",
+  "author": "@JoeyGrable92 X @GetCommunity <joey@getcommunity.com>",
+  "contributors": [],
+  "devDependencies": {
+    "@getcommunity/client-styleguides": "workspace:*",
+    "@getcommunity/config-eslint": "workspace:*",
+    "@getcommunity/config-prettier": "workspace:*",
+    "@getcommunity/config-typescript": "workspace:*",
+    "@getcommunity/gcui-tailwind": "workspace:*",
+    "esbuild-plugin-solid": "^0.6.0",
+    "tsup": "^8.2.2",
+    "vite": "^5.3.4",
+    "vite-plugin-solid": "^2.10.2",
+    "vitest": "^2.0.4"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js",
+      "solid": "./dist/index.jsx"
+    },
+    "./*": {
+      "types": "./dist/*/index.d.ts",
+      "default": "./dist/*/index.js",
+      "solid": "./dist/*/index.jsx"
+    },
+    "./tailwind.css": "./src/tailwind.css",
+    "./src/*": "./src/*"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "peerDependencies": {
+    "@kobalte/core": "^0.13.3",
+    "@kobalte/tailwindcss": "^0.9.0",
+    "@tailwindcss/typography": "^0.5.13",
+    "@tanstack/solid-table": "^8.19.3",
+    "solid-icons": "^1.0.7",
+    "solid-js": "^1.8.18",
+    "tailwindcss": "^3.4.6"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getcommunity/gcui.git"
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "dev": "vite serve dev --host",
+    "format": "prettier --write \"./src/**/*.{ts,tsx,md}\"",
+    "lint": "eslint ./src/**/*",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit --jsx preserve ./src/**/*"
+  },
+  "sideEffects": false,
+  "source": "./src/index.ts",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*/index.d.ts",
+        "./dist/index.d.ts"
+      ]
+    }
+  }
+}
