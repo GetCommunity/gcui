@@ -11,7 +11,7 @@ export default function NumberInput(props: NumberInputProps) {
   };
   return (
     <NumberField
-      class={`number-field flex flex-col gap-1 ${props.className ?? ''}`}
+      class={`number-field flex flex-col gap-1`}
       value={props.value?.toString() ?? undefined}
       defaultValue={props.defaultValue}
       name={props.name}

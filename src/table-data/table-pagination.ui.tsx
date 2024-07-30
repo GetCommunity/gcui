@@ -4,7 +4,7 @@ import {
   KeyboardArrowLeftIcon,
   KeyboardArrowRightIcon,
   KeyboardDoubleArrowLeftIcon,
-  KeyboardDoubleArrowRightIcon
+  KeyboardDoubleArrowRightIcon,
 } from '../icon';
 import { ITablePaginationProps } from './table.types';
 import { getNextHighestPageInterval } from './table-pagination.utils';
@@ -43,8 +43,8 @@ export const TablePagination: Component<ITablePaginationProps> = (props) => {
   );
   return (
     <Show when={props.maximum() > displayPageSizeInterval[0]}>
-      <div class="justify-content-between align-items-center flex flex-row flex-nowrap">
-        <div class="inline-block w-1/5">
+      <div class='justify-content-between align-items-center flex flex-row flex-nowrap'>
+        <div class='inline-block w-1/5'>
           <Button
             class={'outline-light outline-dark'}
             onClick={() => props.table.setPageIndex(0)}
@@ -74,37 +74,37 @@ export const TablePagination: Component<ITablePaginationProps> = (props) => {
             <KeyboardDoubleArrowRightIcon />
           </Button>
         </div>
-        <div class="inline-block w-2/5 text-center">
+        <div class='inline-block w-2/5 text-center'>
           Page {props.table.getState().pagination.pageIndex + 1} of{' '}
           {props.table.getPageCount()} &mdash; {props.table.getRowModel().rows.length}{' '}
           Rows
         </div>
-        <div class="justify-content-end align-items-center inline-flex w-2/5">
+        <div class='justify-content-end align-items-center inline-flex w-2/5'>
           <label
-            id="users-table-pagination-go-to-page-label"
-            for="users-table-pagination-go-to-page-input"
-            class="d-flex justify-content-end align-items-center mb-0 px-1"
+            id='users-table-pagination-go-to-page-label'
+            for='users-table-pagination-go-to-page-input'
+            class='d-flex justify-content-end align-items-center mb-0 px-1'
           >
             Go To
           </label>
           <input
-            id="users-table-pagination-go-to-page-input"
-            type="number"
-            size="sm"
+            id='users-table-pagination-go-to-page-input'
+            type='number'
+            size='sm'
             style={{ 'max-width': '50px' }}
             value={props.table.getState().pagination.pageIndex + 1}
             onChange={handleChangePageNumber}
           />
           <label
-            id="users-table-pagination-size-label"
-            form="users-table-pagination-size-select"
-            class="d-flex justify-content-end align-items-center mb-0 px-1"
+            id='users-table-pagination-size-label'
+            form='users-table-pagination-size-select'
+            class='d-flex justify-content-end align-items-center mb-0 px-1'
           >
             Page Size
           </label>
           <select
-            id="users-table-pagination-size-select"
-            size="sm"
+            id='users-table-pagination-size-select'
+            size='sm'
             style={{ 'max-width': '100px' }}
             value={props.table.getState().pagination.pageSize}
             onChange={handleChangePageSize}

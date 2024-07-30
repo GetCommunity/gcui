@@ -10,8 +10,13 @@
     "@getcommunity/config-prettier": "workspace:*",
     "@getcommunity/config-typescript": "workspace:*",
     "@getcommunity/gcui-tailwind": "workspace:*",
+    "@solidjs/testing-library": "^0.8.9",
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/user-event": "^14.5.2",
     "esbuild-plugin-solid": "^0.6.0",
+    "jsdom": "^24.1.1",
     "tsup": "^8.2.2",
+    "typescript": "^5.5.4",
     "vite": "^5.3.4",
     "vite-plugin-solid": "^2.10.2",
     "vitest": "^2.0.4"
@@ -61,7 +66,7 @@
     "dev": "vite serve dev --host",
     "format": "prettier --write \"./src/**/*.{ts,tsx,md}\"",
     "lint": "eslint ./src/**/*",
-    "test": "vitest run",
+    "test": "vitest",
     "typecheck": "tsc --noEmit --jsx preserve ./src/**/*"
   },
   "sideEffects": false,

@@ -12,7 +12,7 @@ const AvatarImage: Component<AvatarProps> = (props) => {
   return (
     <Image class='avatar'>
       <Image.Img
-        class={`avatar__img shadow ${props.className}`}
+        class={`avatar__img shadow`}
         src={props.src ?? 'https://www.gravatar.com/avatar/?d=identicon'}
         srcset={props.srcset}
         alt={props.alt ?? 'Avatar'}

@@ -5,7 +5,7 @@ import { TextInputProps } from './input.types';
 export default function TextInput(props: TextInputProps) {
   return (
     <TextField
-      class={`text_field flex flex-col gap-1 ${props.className ?? ''}`}
+      class={`text_field flex flex-col gap-1`}
       name={props.name}
       value={props.value || ''}
       defaultValue={props.defaultValue}

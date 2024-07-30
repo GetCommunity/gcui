@@ -117,7 +117,7 @@ export default function Tabs(props: TabsProps) {
   return (
     <KBTabs
       aria-label={props.label}
-      class={`tabs ${props.className ?? ''}`}
+      class={`tabs`}
       value={props.value}
       defaultValue={defaultValue()}
       onChange={props.onChange}

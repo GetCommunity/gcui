@@ -8,7 +8,7 @@ const SelectMultipleInput = <T,>(props: SelectMultipleInputProps<T>) => {
   const icon = children(() => props.triggerIcon);
   return (
     <Select<T>
-      class={`${props.className ?? ''} select`}
+      class={`select`}
       multiple={true}
       value={props.value}
       defaultValue={props.defaultValue}

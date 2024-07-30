@@ -4,13 +4,13 @@ import { ITableBodyProps } from './table.types';
 
 export const TableBody: Component<ITableBodyProps> = (props) => {
   return (
-    <tbody class="border-0 border-solid border-inherit">
+    <tbody class='border-0 border-solid border-inherit'>
       <For each={props.table.getRowModel().rows}>
         {(row) => (
-          <tr class="border-0 border-solid border-inherit hover:bg-gray-100 dark:hover:bg-gray-800">
+          <tr class='border-0 border-solid border-inherit hover:bg-gray-100 dark:hover:bg-gray-800'>
             <For each={row.getVisibleCells()}>
               {(cell) => (
-                <td class="border-b-1 p-2">
+                <td class='border-b-1 p-2'>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
               )}

@@ -1,5 +1,4 @@
-import type { Config } from 'tailwindcss';
-const {
+import {
   GcuiTwAccordion,
   GcuiTwAlert,
   GcuiTwAvatar,
@@ -17,7 +16,8 @@ const {
   GcuiTwSeparator,
   GcuiTwTabs,
   GcuiTwToast,
-} = require('@getcommunity/gcui-tailwind');
+} from '@getcommunity/gcui-tailwind';
+import type { Config } from 'tailwindcss';
 
 export default {
   darkMode: ['selector', '[data-theme="dark"]'],
@@ -25,7 +25,7 @@ export default {
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
     './dev/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@getcommunity/gcui/dist/**/*.{html,js,jsx,ts,tsx,mdx}',
+    '@getcommunity/gcui',
   ],
   theme: {
     extend: {},

@@ -7,7 +7,7 @@ import { ITableFooterActionsProps } from './table.types';
  */
 export const TableFooterActions: Component<ITableFooterActionsProps> = (props) => {
   return (
-    <div class="d-flex justify-content-start align-items-center my-2 flex-row flex-nowrap">
+    <div class='d-flex justify-content-start align-items-center my-2 flex-row flex-nowrap'>
       <Show when={props.isFiltering()}>
         <Button
           class={'outline-light, outline-dark'}

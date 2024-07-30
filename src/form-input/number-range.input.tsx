@@ -6,7 +6,7 @@ export default function NumberRangeSlider(props: NumberRangeSliderProps) {
   return (
     <>
       <Slider
-        class={`slider relative flex w-auto min-w-52 touch-none select-none flex-col items-center gap-2 ${props.className ?? ''}`}
+        class={`slider relative flex w-auto min-w-52 touch-none select-none flex-col items-center gap-2`}
         name={props.name}
         value={props.value}
         defaultValue={props.defaultValue}

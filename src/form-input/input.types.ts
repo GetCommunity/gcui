@@ -16,7 +16,6 @@ export type TextInputProps = {
   disabled?: boolean;
   readOnly?: boolean;
   autoResize?: boolean;
-  className?: string;
 };
 
 export type NumberInputProps = {
@@ -33,7 +32,6 @@ export type NumberInputProps = {
   autoResize?: boolean;
   onChange: (value: number | null) => void | Setter<number | null>;
   validationState?: 'valid' | 'invalid';
-  className?: string;
 };
 
 export type CheckboxInputProps = {
@@ -48,7 +46,6 @@ export type CheckboxInputProps = {
   error?: string;
   disabled?: boolean;
   readOnly?: boolean;
-  className?: string;
 };
 
 export type RadioGroupInputProps = {
@@ -86,7 +83,6 @@ export type NumberRangeSliderProps = {
   error?: string;
   disabled?: boolean;
   readOnly?: boolean;
-  className?: string;
 };
 
 export type SelectInputProps<T> = {
@@ -107,7 +103,6 @@ export type SelectInputProps<T> = {
   error?: string;
   disabled?: boolean;
   readOnly?: boolean;
-  className?: string;
 };
 
 export type SelectMultipleInputProps<T> = {
@@ -128,7 +123,6 @@ export type SelectMultipleInputProps<T> = {
   error?: string;
   disabled?: boolean;
   readOnly?: boolean;
-  className?: string;
 };
 
 type ComboboxBaseProps<T> = {
@@ -147,7 +141,6 @@ type ComboboxBaseProps<T> = {
   disabled?: boolean;
   readOnly?: boolean;
   defaultFilter?: 'startsWith' | 'endsWith' | 'contains';
-  className?: string;
   open?: boolean;
   defaultOpen?: boolean;
   onOpenChange?: (open: boolean, triggerMode?: ComboboxTriggerMode) => void;

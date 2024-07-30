@@ -7,7 +7,7 @@ interface ITableColumnIsActiveProps {
 
 export const TableColumnIsActive: Component<ITableColumnIsActiveProps> = (props) => {
   return (
-    <div class="d-flex justify-content-center align-items-center flex-row flex-nowrap">
+    <div class='d-flex justify-content-center align-items-center flex-row flex-nowrap'>
       <Switch>
         <Match when={props.isActive === true}>
           <IsActiveIcon />

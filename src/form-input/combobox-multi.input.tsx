@@ -8,7 +8,7 @@ const ComboboxMultiInput = <T,>(props: ComboboxMultipleInputProps<T>) => {
   const icon = children(() => props.triggerIcon);
   return (
     <Combobox<T>
-      class={`${props.className ?? ''} combobox`}
+      class={`combobox`}
       multiple={true}
       name={props.name}
       defaultFilter={props.defaultFilter}

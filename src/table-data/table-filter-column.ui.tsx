@@ -22,14 +22,14 @@ export const TableColumnFilter: Component<ITableColumnFilterProps> = (props) => 
     props.setIsFiltering(true);
     return props.column.setFilterValue((old: [number, number]) => [
       e.target.value,
-      old?.[1]
+      old?.[1],
     ]);
   };
   const setFilterMax = (e: any) => {
     props.setIsFiltering(true);
     return props.column.setFilterValue((old: [number, number]) => [
       old?.[0],
-      e.target.value
+      e.target.value,
     ]);
   };
   const setFilterBool = (checked: boolean) => {
@@ -85,11 +85,11 @@ export const TableColumnFilter: Component<ITableColumnFilterProps> = (props) => 
   return (
     <Switch>
       <Match when={typeof firstValue() === 'string'}>
-        <div class="flex">
-          <label class="fw-normal">Search {props.column.id}</label>
+        <div class='flex'>
+          <label class='fw-normal'>Search {props.column.id}</label>
           <input
-            size="sm"
-            type="text"
+            size='sm'
+            type='text'
             value={(columnFilterValue() ?? '') as string}
             onChange={setFilterText}
             style={{ 'min-width': '100px' }}
@@ -97,21 +97,21 @@ export const TableColumnFilter: Component<ITableColumnFilterProps> = (props) => 
         </div>
       </Match>
       <Match when={typeof firstValue() === 'number'}>
-        <div class="justify-content-between align-items-center flex flex-row flex-nowrap gap-2">
-          <div class="w-50 fw-normal">
+        <div class='justify-content-between align-items-center flex flex-row flex-nowrap gap-2'>
+          <div class='w-50 fw-normal'>
             <label>Min</label>
             <input
-              size="sm"
-              type="number"
+              size='sm'
+              type='number'
               value={(columnFilterValue() as [number, number])?.[0] ?? ''}
               onChange={setFilterMin}
             />
           </div>
-          <div class="w-50 fw-normal">
+          <div class='w-50 fw-normal'>
             <label>Max</label>
             <input
-              size="sm"
-              type="number"
+              size='sm'
+              type='number'
               value={(columnFilterValue() as [number, number])?.[1] ?? ''}
               onChange={setFilterMax}
             />
@@ -119,14 +119,14 @@ export const TableColumnFilter: Component<ITableColumnFilterProps> = (props) => 
         </div>
       </Match>
       <Match when={typeof firstValue() === 'boolean'}>
-        <div class="form-group">
+        <div class='form-group'>
           <input
-            name="filterCheckbox"
-            type="checkbox"
+            name='filterCheckbox'
+            type='checkbox'
             checked={filterCheckbox()}
             onChange={handleChangeCheckbox}
           />
-          <label for="filterCheckbox">Yes/No</label>
+          <label for='filterCheckbox'>Yes/No</label>
         </div>
       </Match>
       {/* <Match when={props.column.id === 'tags'}>

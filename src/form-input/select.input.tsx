@@ -8,7 +8,7 @@ const SelectInput = <T,>(props: SelectInputProps<T>) => {
   const icon = children(() => props.triggerIcon);
   return (
     <Select
-      class={`${props.className ?? ''} select`}
+      class={`select`}
       value={props.value}
       defaultValue={props.defaultValue}
       options={props.options}

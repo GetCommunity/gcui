@@ -15,7 +15,6 @@ export type TabsProps = {
   orientation?: 'horizontal' | 'vertical';
   activationMode?: 'automatic' | 'manual';
   disabled?: boolean;
-  className?: string;
   styleType?: ThemeElementStyleType;
   color?: ThemeElementColor;
   size?: ThemeElementSize;
@@ -27,5 +26,4 @@ export type TabItemProps = {
   label: string;
   children: JSX.Element;
   disabled?: boolean;
-  className?: string;
 };

@@ -5,7 +5,7 @@ import { CheckboxInputProps } from './input.types';
 export default function CheckboxSwitchInput(props: CheckboxInputProps) {
   return (
     <KBSwitch
-      class={`switch inline-flex items-start gap-2 ${props.className ?? ''}`}
+      class={`switch inline-flex items-start gap-2`}
       checked={props.checked}
       defaultChecked={props.defaultChecked}
       name={props.name}

@@ -3,5 +3,4 @@ export type AvatarProps = {
   srcset?: string;
   alt?: string;
   width?: number;
-  className?: string;
 };

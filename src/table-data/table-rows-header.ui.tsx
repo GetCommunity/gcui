@@ -6,16 +6,16 @@ import { ITableHeaderProps } from './table.types';
 
 export const TableHeader: Component<ITableHeaderProps> = (props) => {
   return (
-    <thead class="border-0 border-solid border-inherit align-bottom">
+    <thead class='border-0 border-solid border-inherit align-bottom'>
       <For each={props.table.getHeaderGroups()}>
         {(headerGroup) => (
-          <tr class="border-0 border-solid border-inherit">
+          <tr class='border-0 border-solid border-inherit'>
             <For each={headerGroup.headers}>
               {(header) => (
                 <th
                   id={header.id}
                   colSpan={header.colSpan}
-                  class="border-b-1 p-2"
+                  class='border-b-1 p-2'
                   style={{ 'vertical-align': 'top' }}
                 >
                   <div
@@ -26,11 +26,11 @@ export const TableHeader: Component<ITableHeaderProps> = (props) => {
                     }
                     onClick={header.column.getToggleSortingHandler()}
                   >
-                    <div class="d-flex flex-row flex-nowrap">
+                    <div class='d-flex flex-row flex-nowrap'>
                       {flexRender(header.column.columnDef.header, header.getContext())}
                       {{
                         asc: () => <KeyboardArrowDownIcon />,
-                        desc: () => <KeyboardArrowUpIcon />
+                        desc: () => <KeyboardArrowUpIcon />,
                       }[header.column.getIsSorted() as keyof object] ?? null}
                     </div>
                   </div>

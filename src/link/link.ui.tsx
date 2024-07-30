@@ -4,7 +4,6 @@ import { LinkProps } from './link.types';
 
 export default function Link(props: LinkProps) {
   const color = props.color ?? 'default';
-  const className = props.className ? props.className : '';
   const weight = () => (props.bold ? 'bold' : 'regular');
   const fontStyle = () => (props.italic ? 'italic' : 'regular');
   const fontLine = () => {
@@ -44,7 +43,7 @@ export default function Link(props: LinkProps) {
   return (
     <KBLink
       href={props.href}
-      class={`link ${className} ${linkColorKey[color]} ${linkWeightKey[weight()]} ${linkStyleKey[fontStyle()]} ${linkLineKey[fontLine()]} ui-disabled:cursor-not-allowed`}
+      class={`link ${linkColorKey[color]} ${linkWeightKey[weight()]} ${linkStyleKey[fontStyle()]} ${linkLineKey[fontLine()]} ui-disabled:cursor-not-allowed`}
       disabled={props.disabled}
     >
       {linkText()}

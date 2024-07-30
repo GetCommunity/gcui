@@ -6,7 +6,7 @@ import { CheckboxInputProps } from './input.types';
 export default function CheckboxInput(props: CheckboxInputProps) {
   return (
     <Checkbox
-      class={`checkbox flex flex-wrap items-start gap-2 ${props.className ?? ''}`}
+      class={`checkbox flex flex-wrap items-start gap-2`}
       checked={props.checked}
       defaultChecked={props.defaultChecked}
       name={props.name}

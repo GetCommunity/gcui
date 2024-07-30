@@ -8,7 +8,7 @@ const ComboboxInput = <T,>(props: ComboboxInputProps<T>) => {
   const icon = children(() => props.triggerIcon);
   return (
     <Combobox
-      class={`${props.className ?? ''} combobox`}
+      class={`combobox`}
       name={props.name}
       defaultFilter={props.defaultFilter}
       value={props.value}

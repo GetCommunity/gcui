@@ -11,5 +11,4 @@ export type LinkProps = {
   bold?: boolean;
   lineThrough?: boolean;
   overline?: boolean;
-  className?: string;
 };
